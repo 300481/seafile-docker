@@ -90,10 +90,4 @@ server {
     location /media {
         root /opt/seafile/seafile-server-latest/seahub;
     }
-
-    # For letsencrypt
-    location /.well-known/acme-challenge/ {
-        alias /var/www/challenges/;
-        try_files $uri =404;
-    }
 }
