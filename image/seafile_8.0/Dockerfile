@@ -1,8 +1,8 @@
 # See https://hub.docker.com/r/phusion/baseimage/tags/
-FROM phusion/baseimage:0.11
+FROM phusion/baseimage:focal-1.0.0
 ENV SEAFILE_SERVER=seafile-server SEAFILE_VERSION=8.0.4
 
-RUN apt-get update --fix-missing
+RUN apt-get update --fix-missing && apt-get upgrade -qq -y
 
 # Utility tools
 RUN apt-get install -y vim htop net-tools psmisc wget curl git
