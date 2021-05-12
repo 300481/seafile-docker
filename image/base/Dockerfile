@@ -1,13 +1,13 @@
 # Lastet phusion baseimage as of 20180412, based on ubuntu 18.04
 # See https://hub.docker.com/r/phusion/baseimage/tags/
-FROM phusion/baseimage:0.11
+FROM phusion/baseimage:focal-1.0.0
 
 ENV UPDATED_AT=20180412 \
     DEBIAN_FRONTEND=noninteractive
 
 CMD ["/sbin/my_init", "--", "bash", "-l"]
 
-RUN apt-get update -qq && apt-get -qq -y install nginx
+RUN apt-get update -qq && apt-get upgrade -qq -y && apt-get -qq -y install nginx
 
 # Utility tools
 RUN apt-get install -qq -y vim htop net-tools psmisc git wget curl
