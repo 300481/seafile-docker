@@ -1,6 +1,6 @@
 # See https://hub.docker.com/r/phusion/baseimage/tags/
 FROM phusion/baseimage:bionic-1.0.0
-ENV SEAFILE_SERVER=seafile-server SEAFILE_VERSION=8.0.4
+ENV SEAFILE_SERVER=seafile-server SEAFILE_VERSION=8.0.5
 
 RUN apt-get update --fix-missing && apt-get upgrade -qq -y
 
